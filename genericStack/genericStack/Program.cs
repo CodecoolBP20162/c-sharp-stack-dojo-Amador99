@@ -26,6 +26,10 @@ namespace genericStack
 
         public void Push(T data)
         {
+            if (top == size - 1)
+            {
+                throw new ArgumentException();
+            }
             top = top + 1;
             array[top] = data;
         }
@@ -38,7 +42,7 @@ namespace genericStack
             return RemovedElement;
         }
 
-        public T peep()
+        public T peek()
         {
            return array[top];
         }
