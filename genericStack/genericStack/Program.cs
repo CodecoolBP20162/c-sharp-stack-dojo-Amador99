@@ -6,47 +6,11 @@ using System.Threading.Tasks;
 
 namespace genericStack
 {
-    class customStack<T>
+    class Program
     {
-        private T[] array;
-        private int size;
-        private int top;
-        public int Size 
+        static void Main(string[] args)
         {
-            get { return size; }
-            set { size = value; }
+
         }
-
-
-        public customStack(int size)
-        {
-            this.size = size;
-            array = new T[size];
-        }
-
-        public void Push(T data)
-        {
-            if (top == size - 1)
-            {
-                throw new ArgumentException();
-            }
-            top = top + 1;
-            array[top] = data;
-        }
-
-        public T Pop()
-        {
-            T RemovedElement;
-            RemovedElement = array[top];
-            top = top - 1;
-            return RemovedElement;
-        }
-
-        public T peek()
-        {
-           return array[top];
-        }
-
-
     }
 }
